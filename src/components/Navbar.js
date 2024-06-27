@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Navbar = () => {
+const Navbar = ({setInput,dispatch,FoodData}) => {
     const day = new Date().toDateString();
     console.log(day);
 
@@ -24,6 +24,8 @@ const Navbar = () => {
                     placeholder='Search here'
                     className='w-full lg:w-96 shadow-md rounded-3xl focus:bg-gray-300 text-black focus:outline-none focus:border-0 p-2'
                     name="searchTerm"
+                    onClick={()=>{}}
+                    onChange={(e)=>{dispatch({type:"input"});setInput(e.target.value)}}
                 />
             </div>
         </div>
